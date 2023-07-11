@@ -2,7 +2,7 @@ const { Telegraf, Markup } = require('telegraf');
 require('dotenv').config();
 const text = require('./const');
 
-const bot = new Telegraf(process.env.BOT_TOKEN);
+const bot = new Telegraf(process.env.BOT_TOKEN);//Enter your bot-token
 bot.start((ctx) => ctx.reply(`Hi ${ctx.message.from.first_name ? ctx.message.from.first_name : `Anonim`}! Жми /help, чтобы узнать что я умею!`));
 bot.help((ctx) => ctx.reply(text.commands)); 
 
